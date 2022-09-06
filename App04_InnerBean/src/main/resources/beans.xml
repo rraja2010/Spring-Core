@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="cus" class="com.lara.Customer">
+		<property name="person">
+			<bean class="com.lara.Person">
+				<property name="fname" value="amit" />
+				<property name="address" value="ranchi" />
+				<property name="age" value="24" />
+			</bean>
+		</property>
+	</bean>
+
+
+	<bean id="emp" class="com.lara.Employee">
+		<property name="firstName" value="lara" />
+		<property name="permanentAddress">
+			<bean class="com.lara.Address">
+				<property name="houseNo" value="123/bt" />
+				<property name="streetName" value="marathalli" />
+				<property name="city" value="bagnalore" />
+				<property name="state" value="kar" />
+			</bean>
+		</property>
+	</bean>
+</beans> 

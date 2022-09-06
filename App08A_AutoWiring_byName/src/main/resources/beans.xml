@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="permanentAddress" class="com.lara.Address">
+		<property name="houseNo" value="123/BT" />
+		<property name="streetName" value="BTM" />
+	</bean>
+	
+	<bean id="p1" class="com.lara.Person" autowire="byName">
+		<property name="firstName" value="amit"/>
+	</bean>
+
+</beans>
+<!-- 
+In case of byName -  in the <bean> tag id should be same as variable declared in the respective class
+else it will throw run time exception
+Here permanentAddress is the variable declared in the Person class.
+ -->

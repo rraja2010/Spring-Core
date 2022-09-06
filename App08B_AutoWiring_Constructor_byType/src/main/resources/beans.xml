@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="a1" class="com.lara.Address">
+		<constructor-arg index="0" value="123/B" />
+		<constructor-arg index="1" value="BTM" />
+		<constructor-arg index="2" value="Bangalore" />
+		<constructor-arg index="3" value="Karnataka" />
+	</bean>
+
+	<bean id="s2" class="com.lara.Student" autowire="default">
+		<constructor-arg index="0" value="Amit" />
+		<constructor-arg index="1" value="Kumar" />
+		<constructor-arg index="2" value="25" />
+		<constructor-arg index="3" value="56.36" />
+		<constructor-arg index="4" ref="a1"/>
+	</bean>
+	
+	<bean id="s1" class="com.lara.Student" autowire="constructor">
+		<constructor-arg index="0" value="Amit" />
+		<constructor-arg index="1" value="Kumar" />
+		<constructor-arg index="2" value="25" />
+		<constructor-arg index="3" value="56.36" />
+	</bean>
+	
+</beans>
+
+
+<!-- 
+if autowire="constructor" then it is byType.
+if autowire="default" then explicit wiring
+ -->

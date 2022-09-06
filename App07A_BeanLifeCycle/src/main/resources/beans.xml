@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- <bean id="t1" class="com.lara.Test">
+		<property name="param1" value="hello"/>
+	</bean> -->
+	
+	<!-- <bean id="p1" class="com.lara.Person">
+		<property name="firstName" value="amit"/>
+		<property name="age" value="25"/>
+	</bean> -->
+	
+	<bean id="s1" class="com.lara.Student" init-method="init" destroy-method="destroy">
+		<property name="firstName" value="amit"/>
+		<property name="age" value="25"/>
+	</bean>
+
+</beans>

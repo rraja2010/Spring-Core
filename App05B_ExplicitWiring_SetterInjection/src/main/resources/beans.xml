@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="ad" class="com.lara.Address">
+		<property name="houseNo" value="123/btm" />
+		<property name="streetName" value="Marathalli" />
+	</bean>
+	
+	<!-- 
+	<bean id="permanentAddress" class="com.lara.Address">
+		<property name="houseNo" value="123/btm" />
+		<property name="streetName" value="New Madhukam" />
+	</bean>
+	 -->
+
+		<bean id="p1" class="com.lara.Person" autowire="default"> 
+		<property name="permanentAddress" ref="ad"/> 
+	 	
+	 	<!-- 	Explicit wiring/Default wiring used the ref-
+	 
+	 	XML attribute autowire is defaut as no
+	 	
+	 	"no": 
+
+		The traditional Spring default. No automagical wiring. Bean references
+		must be defined in the XML file via the <ref/> element (or "ref"
+		attribute). We recommend this in most cases as it makes documentation
+		more explicit.
+	 
+	 	-->
+		
+		
+		<!-- <bean id="p1" class="com.lara.Person" autowire="byName"> -->
+		
+		<!-- Comments any of the above Address bean tag for byType. -->
+		
+		<!-- <bean id="p1" class="com.lara.Person" autowire="byType"> -->
+		
+	 	<!-- <bean id="p1" class="com.lara.Person" autowire="constructor"> -->
+	 	<!-- constructor wiring - internally it is using the byType wiring -->
+	 	
+	 	
+	
+		<property name="firstName" value="amit" />
+		<property name="age" value="45" />
+		<property name="weight" value="55.69" />
+		<property name="mails">
+			<list>
+				<value>amit@amit.com</value>
+				<value>amitku@gamil.com</value>
+				<value>amit@yahoo.com</value>
+			</list>
+		</property>
+
+		<property name="mobileNo">
+			<list>
+				<value>12345678</value>
+				<value>45698712</value>
+				<value>78965412</value>
+			</list>
+		</property>
+
+		<property name="loverName">
+			<set>
+				<value>java</value>
+				<value>java</value>
+				<value>j2ee</value>
+				<value>j2ee</value>
+				<value>c++</value>
+				<value>c++</value>
+			</set>
+		</property>
+
+		<property name="eucation">
+			<map>
+				<entry key="degree" value="B.Tech" />
+				<entry key="degree" value="BBBB.Tech" />
+				<entry key="postDegree" value="M.tech" />
+			</map>
+		</property>
+
+		<property name="project">
+			<props>
+				<prop key="mini">Java Project</prop>
+				<prop key="major">J2EE Project</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="owner" class="com.amit.vehicle.Owner" autowire="byType">
+		<property name="personId" value="1001" />
+		<property name="personName" value="Amit" />
+	</bean>
+
+	<bean id="audi" class="com.amit.vehicle.Car">
+		<property name="carId" value="200" />
+		<property name="carName" value="Audi" />
+		<property name="cc" value="1500" />
+	</bean>
+
+</beans>
+
+<!-- 
+In the above XML, we can not define the two Car types at a time i.e. we can not define MarcedezeBenz and Audi beans at the same time. 
+Because at runtime Spring will throw an exception like NoUniqueBeanDefinitionException, Since two beans (MarcedezeBenz and Audi) are available to 
+inject with the type of Car, we can say it as ambiguity.
+
+ -->

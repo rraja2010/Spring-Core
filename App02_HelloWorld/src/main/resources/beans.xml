@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="e1" class="com.lara.Employee">
+		<property name="firstName" value="AMIT"/>
+		<property name="lastName" value="Kumar"/>
+		<property name="age" value="25"/>
+		<property name="marks">
+			<list>
+				<value>100</value>
+				<value>200</value>
+				<value>300</value>
+				<value>400</value>
+				<value>500</value>
+				<value>600</value>
+			</list>
+		</property>
+	</bean>
+</beans>

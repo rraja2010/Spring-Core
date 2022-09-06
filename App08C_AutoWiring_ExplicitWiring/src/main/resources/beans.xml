@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="ad" class="com.lara.Address">
+		<property name="houseNo" value="123/BT" />
+		<property name="streetName" value="BTM" />
+	</bean>
+
+
+	<bean id="p1" class="com.lara.Person" autowire="default">
+
+		<property name="firstName" value="amit" />
+		<property name="lastName" value="kumar" />
+		<property name="age" value="22" />
+		<property name="permananentAddress" ref="ad" />
+
+	</bean>
+
+</beans>
